@@ -1,0 +1,58 @@
+index,Id,serviceName,type,domain,sub_domain,language,framework,architecture,first_release,status,diagram_file
+0,tokenizer,Tokenizer,service,charge,tokenizer,javascript,lambda,none,,alive,tokenizer/C2.svg
+1,tokenization_source_api,Tokenization Source Api,service,charge,tokenizer,typescript,lambda,clean_arch,,alive,tokenizer/C2.svg
+2,payment_source_api,Payment Source Api,service,charge,tokenizer,javascript,lambda,none,,alive,tokenizer/C2.svg
+3,tokenization_source,Tokenization Source Db,database,charge,tokenizer,dynamo,noSQL,none,,alive,tokenizer/C2.svg
+4,payment_source,Payment Source Db,database,charge,tokenizer,dynamo,noSQL,none,,alive,tokenizer/C2.svg
+5,payment_gateway,Payment Gateway (Iugu / Adyen),external_system,charge,tokenizer,,,none,,alive,tokenizer/C2.svg
+6,checkout,Checkout P2,external_system,charge,tokenizer,,,none,,alive,tokenizer/C2.svg
+7,authentication_api,Authentication Api,external_system,charge,tokenizer,,,none,,alive,tokenizer/C2.svg
+8,event_bridge_rule,Recurrence Event Bridge Rule,queue,charge,recurrence,,,none,,alive,recurrence/C2.svg
+9,recurrence_status_updater,Recurrence Status Updater,service,charge,recurrence,typescript,lambda,none,,alive,recurrence/C2.svg
+10,command_creator,Command Creator,service,charge,recurrence,javascript,lambda,none,,alive,recurrence/C2.svg
+11,recurrence_api,Recurrence Api,service,charge,recurrence,javascript,lambda,none,,alive,recurrence/C2.svg
+12,command_processor,Command Processor,service,charge,recurrence,javascript,lambda,none,,alive,recurrence/C2.svg
+13,recurrences,Recurrences Db,database,charge,recurrence,postgres,SQL,none,,alive,recurrence/C2.svg
+14,charge_processor,Charge Processor,service,charge,recurrence,javascript,lambda,none,,alive,recurrence/C2.svg
+15,legacy_charges,Legacy Charges,service,charge,recurrence,,,none,,alive,recurrence/C2.svg
+16,subscriptions,Subscriptions Api,external_system,charge,recurrence,,,none,,alive,recurrence/C2.svg
+17,attendant,Atendimento,person,charge,payment_link,,,,,alive,payment-link/C2.svg
+18,client,Cliente,person,charge,payment_link,,,,,alive,payment-link/C2.svg
+19,payment_link_frontend,Payment Link Frontend,service,charge,payment_link,typescript,nextjs,simple_mvc,,alive,payment-link/C2.svg
+20,payment_link_showcase,Payment Link Vitrine,service,charge,payment_link,typescript,nextjs,simple_mvc,,alive,payment-link/C2.svg
+21,cep_api,Cep Api,external_system,charge,payment_link,,,none,,alive,payment-link/C2.svg
+22,user_api,User Api,external_system,charge,payment_link,,,none,,alive,payment-link/C2.svg
+23,event_bus_centralizer,Event Bus Centralizer,external_system,charge,payment_link,,,none,,alive,payment-link/C2.svg
+24,payment_link_updater,Payment Link Updater,service,charge,payment_link,typescript,lambda,clean_arch,,alive,payment-link/C2.svg
+25,payment_link_status_updater,Payment Link Status Updater,service,charge,payment_link,typescript,lambda,clean_arch,,alive,payment-link/C2.svg
+26,payment_link_finder,Payment Link Finder,service,charge,payment_link,typescript,lambda,clean_arch,,alive,payment-link/C2.svg
+27,payment_link_builder,Payment Link Builder,service,charge,payment_link,typescript,lambda,clean_arch,,alive,payment-link/C2.svg
+28,payment_link_database,Payment Link Database,database,charge,payment_link,dynamo,noSQL,none,,alive,payment-link/C2.svg
+29,payment_integration_api,Payment Integration Api,external_system,invoice,invoice,,,none,,alive,invoice/C2.svg
+30,event_bus_adapter,Event Bus Adapter,service,invoice,invoice,typescript,lambda,none,,alive,invoice/C2.svg
+31,billing_event_bridge,Billing Event Bridge,queue,invoice,invoice,typescript,,none,,alive,invoice/C2.svg
+32,iugu_postback,Iugu Postback,service,invoice,invoice,typescript,lambda,clean_arch,,alive,invoice/C2.svg
+33,financial_events,Financial Events,service,invoice,invoice,typescript,lambda,clean_arch,,alive,invoice/C2.svg
+34,adn_credit_card_adapter,Adn Credit Card Adapter,service,invoice,invoice,typescript,lambda,clean_arch,,alive,invoice/C2.svg
+35,adn_adapter,(novo) Adn Adapter,service,invoice,invoice,typescript,lambda,clean_arch,,alive,invoice/C2.svg
+36,rds_financial_events,RDS Financial Events Database,database,invoice,invoice,postgres,SQL,none,,alive,invoice/C2.svg
+37,adn_google_adapter,Adn Google Adapter,service,invoice,invoice,typescript,lambda,none,,alive,invoice/C2.svg
+38,integrador_financeiro,Integrador Financeiro,database,invoice,invoice,mySQL,SQL,none,,alive,invoice/C2.svg
+39,adn_robot,Robo da Adn,external_system,invoice,invoice,,,none,,alive,invoice/C2.svg
+40,company_api,Company Api,external_system,invoice,invoice,,,none,,alive,invoice/C2.svg
+41,billing_api,Billing Api,service,charge,charge,javascript,express,none,,alive,charge/C2.svg
+42,user_subscription_handler,User Subscription Handler,service,charge,charge,typescript,lambda,clean_arch,,alive,charge/C2.svg
+43,user_creation_handler,User Creation Handler,service,charge,charge,typescript,lambda,clean_arch,,alive,charge/C2.svg
+44,installment_finder,Installment Finder,service,charge,charge,typescript,lambda,clean_arch,,alive,charge/C2.svg
+45,installment_saver,Installment Saver,service,charge,charge,typescript,lambda,clean_arch,,alive,charge/C2.svg
+46,installment_updater,Installment Updater,service,charge,charge,typescript,lambda,clean_arch,,alive,charge/C2.svg
+47,installment_manager_db,Installment Manager Db,database,charge,charge,mySQL,SQL,none,,alive,charge/C2.svg
+48,billing_table,Billing Table,database,charge,charge,dynamo,noSQL,none,,alive,charge/C2.svg
+49,billing_worker,Billing Worker,service,charge,charge,javascript,lambda,none,,alive,charge/C2.svg
+50,charge_notifier,Charge Notifier,service,charge,charge,typescript,lambda,clean_arch,,alive,charge/C2.svg
+51,charge_scheduler,Charge Scheduler,service,charge,charge_scheduler,typescript,lambda,clean_arch,,future,charge_scheduler/C2.svg
+52,charge_scheduler_db,Charge Scheduler Db,database,charge,charge_scheduler,mySQL,SQL,none,,future,charge_scheduler/C2.svg
+53,event_bridge_rules,Charge Scheduler Event Bridge Rules,queue,charge,charge_scheduler,,,none,,future,charge_scheduler/C2.svg
+54,charge_schedule_processor,Charge Schedule Processor,service,charge,charge_scheduler,typescript,lambda,clean_arch,,future,charge_scheduler/C2.svg
+55,acquirer_notification_adapter,Acquirer Notification Adapter,service,charge,acquirer_adapter,typescript,lambda,clean_arch,,alive,charge_scheduler/C2.svg
+56,acquirer_charge_creator,Acquirer Charge Creator,service,charge,acquirer_adapter,typescript,lambda,clean_arch,,alive,charge_scheduler/C2.svg
