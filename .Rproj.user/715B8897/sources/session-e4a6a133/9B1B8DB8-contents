@@ -26,8 +26,4 @@ nodes <- as.data.frame(
   stringsAsFactors=FALSE
 )
 
-servicesNetF <- graph.edgelist(as.matrix(links), directed = F)
-V(servicesNetF)$cluster <- membership(cluster_louvain(servicesNetF))
-nodes$cluster <- V(servicesNetF)$cluster
-
 write.csv(nodes, "./artifacts/nodes.csv", row.names = T)

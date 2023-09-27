@@ -155,27 +155,6 @@ summary(businessCriticalityReduced)
 
 {
   chart.Correlation(
-    businessCriticalityDummies %>% select(
-      criticalityMean,
-      language_dynamo,
-      language_javascript,
-      language_mySQL,
-      language_postgres,
-      language_typescript,
-      language_NA
-    ),
-    histogram = T
-  )
-  mtext("Correlação entre criticidade de negócio e linguagem", side=3, line=3)
-}
-
-
-
-
-
-
-{
-  chart.Correlation(
     select(workCriticalityReduced, c(3:4, 13, 16:19, 21:22)),
     histogram = T
   )

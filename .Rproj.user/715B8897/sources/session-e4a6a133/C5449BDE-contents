@@ -52,24 +52,6 @@ businessCriticalityReduced <- merge(
 businessCriticalityReduced$type <- as.factor(businessCriticalityReduced$type)
 businessCriticalityReduced$domain <- as.factor(businessCriticalityReduced$domain)
 businessCriticalityReduced$sub_domain <- as.factor(businessCriticalityReduced$sub_domain)
-businessCriticalityReduced$language <- ifelse(is.na(businessCriticalityReduced$language), "na", businessCriticalityReduced$language)
 businessCriticalityReduced$language <- as.factor(businessCriticalityReduced$language)
 businessCriticalityReduced$framework <- as.factor(businessCriticalityReduced$framework)
 businessCriticalityReduced$architecture <- as.factor(businessCriticalityReduced$architecture)
-
-
-businessCriticalityDummies <- businessCriticalityReduced %>% 
-  select(c(
-    "Id", 
-    "criticalityMean", 
-    "degree",
-    "betweenness",
-    "closeness",
-    "eigenvector", 
-    "power", 
-    "language", 
-  ))
-
-businessCriticalityDummies <- dummy_columns(.data = businessCriticalityDummies, 
-                                            select_columns = "language",
-                                            remove_selected_columns = T)
