@@ -72,3 +72,9 @@ createBoxCoxColumn <- function(data, column, newColumnName = "boxCoxTransformed"
   data[newColumnName] <- transformed[column]
   return(data)
 }
+
+tPlot <- function(x) {
+  lambdaPlot <- 2  
+  factor <- 3
+  return ( (x*factor) ^lambdaPlot)
+}

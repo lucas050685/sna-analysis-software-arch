@@ -2,7 +2,7 @@ pacotes <- c("caret", "plotly","tidyverse","ggrepel","fastDummies","knitr","kabl
              "splines","reshape2","PerformanceAnalytics","correlation","see",
              "ggraph","psych","nortest","rgl","car","ggside","tidyquant","olsrr",
              "jtools","ggstance","magick","cowplot","emojifont","beepr","Rcpp", 
-             "igraph")
+             "igraph", "sjPlot")
 
 options(rgl.debug = TRUE)
 
@@ -17,5 +17,3 @@ if(sum(as.numeric(!pacotes %in% installed.packages())) != 0){
 }
 
 rm(pacotes)
-rm(instalador)
-rm(i)
