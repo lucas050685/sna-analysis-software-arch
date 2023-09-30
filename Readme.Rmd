@@ -5,11 +5,11 @@ date: "2023-09-25"
 output: html_document
 ---
 
-# Ordem de execução dos arquivos
+# Description
+This RProject is social network analytics in a microservices architecture. The objective of this research is to identify, among a variety of metrics, those capable of explaining the observed criticality behavior of each service in the architecture diagrams.
+
+# Files execution order
 Packages.R
 Functions.R
-SNA.R
-FormCompilation.R
-PrePlots.R
-ModelsBusiness.R
-BusinessPosPlot.R
+Analysis.R
+Plots.R
